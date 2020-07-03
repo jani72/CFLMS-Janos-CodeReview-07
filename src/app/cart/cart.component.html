@@ -1,0 +1,24 @@
+<div class="container my-5">
+    <table class="table">
+        <thead class="thead-secondary">
+            <tr class="row">
+                <th class="col-md-2">Travel</th>
+                <th class="col-md-8">Description</th>
+                <th class="col-md-2">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="row" *ngFor="let cartTravel of cartTravels">
+                <td class="col-md-2"><img class="p-0 w-100" src="{{cartTravel.image}}" alt="Travel Picture"></td>
+                <td class="col-md-8"><b>{{cartTravel.name}}</b><br>{{cartTravel.description}}<br>Start: {{cartTravel.startDate}}<br>Duration: {{cartTravel.duration}}</td>
+                <td class="col-md-2"><b>{{cartTravel.price}} €</b></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button type="button" class="btn btn-primary btn-lg btn-block" (click)="onBookTravels()">Order Now!</button>
+
+
+
+
+</div>

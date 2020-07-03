@@ -1,0 +1,16 @@
+<div class="container col-11 d-flex flex-wrap junstify-content-around my-5 mx-auto" *ngFor="let travel of travels; index as travelId">
+
+
+	<div class="picture col-sm-12 col-md-6">
+		<img class="rounded" src="{{travel.image}}" alt="Travel">
+	</div>
+	<div class="col-sm-12 col-md-6 text-right">
+		<p class="h3">{{travel.name}}!</p>
+		<p class="h4">Start: {{travel.startDate}}</p>
+		<p class="h4">Duration: {{travel.duration}}</p>
+		<a class="btn btn-success btn-lg" [routerLink]="['/travels', travelId]">Details</a>
+	</div>
+
+
+</div>
+
